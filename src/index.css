@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(240 10% 4%);
+  --color-foreground: hsl(0 0% 98%);
+
+  --color-primary: hsl(263 94% 61%);
+  --color-primary-foreground: hsl(0 0% 98%);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to sure everything still looks the same.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility glass-card {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+@utility premium-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.1) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
