@@ -1,5 +1,5 @@
 import React from 'react';
-import { Copy, RefreshCw, Check, ShieldCheck, ShieldAlert, Shield } from 'lucide-react';
+import { Copy, RefreshCw, Check } from 'lucide-react';
 import { usePasswordGenerator } from '../hooks/usePasswordGenerator';
 import { cn } from '../lib/utils';
 
